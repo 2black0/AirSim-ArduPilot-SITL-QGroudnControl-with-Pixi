@@ -1,0 +1,37 @@
+[workspace]
+name = "airsim-ardupilot-vslam-pixi-ros"
+version = "0.1.0"
+description = "Simulation environment (AirSim, QGroundControl, ArduPilot SITL)"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+# Environment definition mapping: each environment lists feature(s) to activate.
+[environments]
+simulation = ["simulation"]
+
+# Feature providing all toolchain & Python deps needed for ArduPilot SITL build
+[feature.simulation.dependencies]
+python = ">=3.11,<3.13"
+gcc_linux-64 = "*"
+gxx_linux-64 = "*"
+make = "*"
+pkg-config = "*"
+ccache = "*"
+git = "*"
+wget = "*"
+unzip = "*"
+zip = "*"
+rsync = "*"
+
+# Python (PyPI) packages – minimal for SITL + MAVLink interaction
+[feature.simulation.pypi-dependencies]
+empy = "==3.3.4"
+pexpect = "*"
+dronecan = "*"
+future = "*"
+pymavlink = "*"
+MAVProxy = "*"
+pyserial = "*"
+packaging = "*"
+monotonic = "*"
+

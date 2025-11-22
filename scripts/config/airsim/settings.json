@@ -1,0 +1,92 @@
+{
+    "SettingsVersion": 1.2,
+    "LogMessagesVisible": false,
+    "SimMode": "Multirotor",
+    "ClockSpeed": 1,
+    "PhysicsEngineName": "FastPhysicsEngine",
+    "SpeedUnitFactor": 1.0,
+    "SpeedUnitLabel": "m/s",
+    "ViewMode": "FlyWithMe",
+    "OriginGeopoint": {
+        "Latitude": -7.2823507,
+        "Longitude": 112.7923504,
+        "Altitude": 20
+    },
+    "Vehicles": {
+        "Copter": {
+            "VehicleType": "ArduCopter",
+            "EnableCollisionPassthrogh": false,
+            "EnableCollisions": true,
+            "AllowAPIAlways": true,
+            "UseSerial": false,
+            "LocalHostIp": "127.0.0.1",
+            "UdpIp": "127.0.0.1",
+            "UdpPort": 9003,
+            "ControlPort": 9002,
+            "Cameras": {
+                "Camera": {
+                    "CaptureSettings": [
+                        {
+                            "PublishToRos": true,
+                            "ImageType": 0,
+                            "FOV_Degrees": 90,
+                            "Width": 1280,
+                            "Height": 720
+                        }
+                    ],
+                    "X": 0.25,
+                    "Y": 0.0,
+                    "Z": 0.1,
+                    "Pitch": -90.0,
+                    "Roll": 0.0,
+                    "Yaw": 0.0
+                }
+            },
+            "Sensors": {
+                "Barometer": {
+                    "SensorType": 1,
+                    "Enabled": true
+                },
+                "Imu": {
+                    "SensorType": 2,
+                    "Enabled": true
+                },
+                "Gps": {
+                    "SensorType": 3,
+                    "Enabled": true,
+                    "X": 0.25,
+                    "Y": 0.0,
+                    "Z": 0.1
+                },
+                "Magnetometer": {
+                    "SensorType": 4,
+                    "Enabled": true
+                },
+                "Distance": {
+                    "SensorType": 5,
+                    "Enabled" : false
+                },
+                "Lidar": {
+                    "SensorType": 6,
+                    "Enabled": false,
+                    "NumberOfChannels": 16,
+                    "Range": 120,
+                    "RotationsPerSecond": 10,
+                    "PointsPerSecond": 100000,
+                    "X": 0.25,
+                    "Y": 0.0,
+                    "Z": 0.1,
+                    "Roll": 0,
+                    "Pitch": -90,
+                    "Yaw": 0,
+                    "VerticalFOVUpper": 75,
+                    "VerticalFOVLower": -75,
+                    "HorizontalFOVStart": -40,
+                    "HorizontalFOVEnd": 40,
+                    "DrawDebugPoints": true,
+                    "DataFrame": "SensorLocalFrame"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+# Override parameters to keep SITL stable on modest CPUs/GPU
+# Lower scheduler rate avoids "Main loop slow" warnings in AirSim SITL
+SCHED_LOOP_RATE,180
+# Limit waypoint translation speeds to 5 km/h
+WPNAV_SPEED,140
+WPNAV_SPEED_UP,140
+WPNAV_SPEED_DN,140
+# Restrict attitude authority to keep movements gentle
+ANGLE_MAX,1500
+# Lower waypoint acceleration for smoother motion
+WPNAV_ACCEL,50
+# Reduce yaw dynamics for gentler heading changes (50% of defaults)
+ATC_SLEW_YAW,500
+ATC_RATE_Y_MAX,30
+ATC_ACCEL_Y_MAX,6000
+WPNAV_ACCEL_C,10
+
+SIM_SPEEDUP,20
+# Loosen HDOP thresholds and disable GCS/throttle failsafes for streamlined testing
+GPS_HDOP_GOOD,9999
+EKF3_REQ_HDOP,9.9
+FS_GCS_ENABLE,0
+FS_THR_ENABLE,0
