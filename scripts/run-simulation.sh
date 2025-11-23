@@ -136,7 +136,7 @@ echo ""
 cd "${ARDUPILOT_DIR}"
 
 # Load parameter file if available
-PARAM_FILE="${PROJECT_ROOT}/scripts/config/ardupilot/airsim.parm"
+PARAM_FILE="${PROJECT_ROOT}/config/ardupilot/airsim.parm"
 if [[ -f "${PARAM_FILE}" ]]; then
   echo "[run-simulation] Using parameter file: ${PARAM_FILE}"
   PARAM_ARG="--add-param-file=${PARAM_FILE}"

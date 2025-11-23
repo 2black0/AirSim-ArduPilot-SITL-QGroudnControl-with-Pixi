@@ -36,7 +36,7 @@ fi
 # Setup settings.json
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 PROJECT_ROOT=$(cd "${SCRIPT_DIR}/.." && pwd)
-SETTINGS_TEMPLATE="${PROJECT_ROOT}/scripts/config/airsim/settings.json"
+SETTINGS_TEMPLATE="${PROJECT_ROOT}/config/airsim/settings.json"
 SETTINGS_TARGET="${TARGET_DIR}/settings.json"
 DOCUMENTS_DIR="${HOME}/Documents/AirSim"
 DOCUMENTS_SETTINGS="${DOCUMENTS_DIR}/settings.json"
