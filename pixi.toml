@@ -1,5 +1,5 @@
 [workspace]
-name = "airsim-ardupilot-vslam-pixi-ros"
+name = "airsim-ardupilot-pixi"
 version = "0.1.0"
 description = "Simulation environment (AirSim, QGroundControl, ArduPilot SITL)"
 channels = ["conda-forge"]

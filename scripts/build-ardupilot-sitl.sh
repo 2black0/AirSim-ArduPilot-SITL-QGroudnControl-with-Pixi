@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build ArduPilot SITL (ArduCopter) inside pixi 'simulation' environment.
+# Build ArduPilot SITL (ArduCopter) inside pixi environment.
 # No external prereq script is executed.
 # Requirements are provided by pixi: gcc/g++, make, python + waf deps, git.
 
@@ -37,9 +37,9 @@ echo "[build-ardupilot] AIRSIM_HOME=${AIRSIM_HOME}"
 mkdir -p "${AIRSIM_HOME}"
 
 # Basic sanity: ensure gcc & python present from pixi env
-command -v gcc >/dev/null || { echo "[build-ardupilot] gcc not found (activate pixi env 'simulation')" >&2; exit 1; }
-command -v python >/dev/null || { echo "[build-ardupilot] python not found (activate pixi env 'simulation')" >&2; exit 1; }
-command -v git >/dev/null || { echo "[build-ardupilot] git not found (activate pixi env 'simulation')" >&2; exit 1; }
+command -v gcc >/dev/null || { echo "[build-ardupilot] gcc not found (activate pixi env with 'pixi shell')" >&2; exit 1; }
+command -v python3 >/dev/null || { echo "[build-ardupilot] python3 not found (activate pixi env with 'pixi shell')" >&2; exit 1; }
+command -v git >/dev/null || { echo "[build-ardupilot] git not found (activate pixi env with 'pixi shell')" >&2; exit 1; }
 
 if [[ ${FORCE_CLONE} -eq 1 && -d "${ARDUPILOT_DIR}" ]]; then
   echo "[build-ardupilot] --force-clone: removing existing ${ARDUPILOT_DIR}"

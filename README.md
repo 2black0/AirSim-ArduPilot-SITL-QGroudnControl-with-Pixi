@@ -40,10 +40,10 @@ This will create an isolated `simulation` environment with:
 
 ### 2. Activate Pixi Environment
 
-Enter the simulation environment:
+Enter the pixi environment:
 
 ```bash
-pixi shell -e simulation
+pixi shell
 ```
 
 All subsequent commands should be run within this shell.
@@ -252,7 +252,7 @@ If ArduPilot build fails:
 Ensure you're in the Pixi environment:
 
 ```bash
-pixi shell -e simulation
+pixi shell
 ```
 
 ### Settings Not Applied
