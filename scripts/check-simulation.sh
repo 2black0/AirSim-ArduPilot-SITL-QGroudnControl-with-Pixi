@@ -190,7 +190,7 @@ check_pixi_env() {
     echo -e "${GREEN}✓ Running inside pixi environment: ${PIXI_ENVIRONMENT_NAME}${RESET}"
   else
     echo -e "${YELLOW}⚠ Not running inside pixi environment${RESET}"
-    echo "  Activate with: pixi shell -e simulation"
+    echo "  Activate with: pixi shell"
     ((CHECKS_WARNING++))
   fi
   
